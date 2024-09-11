@@ -1,0 +1,91 @@
+/* 全体の基本スタイル */
+body, h1, p {
+  margin: 0;
+}
+
+/* header要素のスタイル */
+header {
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: rgb(255, 255, 255);
+}
+
+/* main要素のスタイル */
+main {
+  margin:10px 10px 10px 10px;
+}
+
+/* parent要素のFlexbox設定 */
+#parent {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* contents要素のスタイル */
+.contents {
+  flex-basis: 25%;
+  border: 3px solid rgb(238, 204, 204);
+  padding: 10px 15px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.contents h2 {
+  font-size: 25px;
+  border-bottom: 3px dotted rgb(236, 122, 122);
+  position: relative;
+}
+
+.contents h2::before {
+  content: "●";
+  color: rgb(239, 111, 139);
+  margin-right: 5px;
+}
+
+#parent p:nth-of-type(2)::first-letter {
+  font-weight: bold;
+  color: rgb(97, 206, 249);
+}
+
+/* img要素のスタイル */
+.contents img {
+  margin: 10px 0;
+  width: 70%;
+}
+
+/* footer要素のスタイル */
+footer {
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+
+footer a {
+  color: rgb(255, 255, 255);
+}
+
+footer a:visited {
+  color: rgb(193, 234, 251);
+}
+
+footer a:hover {
+  color: rgb(245, 178, 168);
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  h2 {
+      font-size: 30px;
+  }
+
+  p, a {
+      font-size: 25px;
+  }
+
+  #parent {
+      flex-direction: column;
+  }
+}
